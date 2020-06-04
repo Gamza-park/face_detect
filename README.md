@@ -1,6 +1,7 @@
 # face_detect
 
-## Use detect_yolo.py
+### yolo
+if you use yolo 
 ```
 $ mkdir yolo
 ```

@@ -4,7 +4,7 @@ import numpy as np
 model_name = 'res10_300x300_ssd_iter_140000.caffemodel'
 prototxt_name = 'deploy.prototxt.txt'
 min_confidence = 0.5
-file_name = 'video/obama_01.mp4'
+file_name = '../../video/obama_01.mp4'
 
 
 def detectAndDisplay(frame):

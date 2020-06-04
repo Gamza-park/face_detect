@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-face_cascade_name = '../opencv/data/haarcascades/haarcascade_frontalface_alt.xml'
-eyes_cascade_name = '../opencv/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml'
+face_cascade_name = '../../haarcascade_frontalface_alt.xml'
+eyes_cascade_name = '../../haarcascade_eye_tree_eyeglasses.xml'
 file_name = 'video/face_01.mp4'
 
 def detectAndDisplay(frame):
@@ -23,8 +23,8 @@ def detectAndDisplay(frame):
             frame = cv2.circle(frame, eye_center, radius, (255, 0, 0), 4)
     cv2.imshow("Capture - Face", frame)
 
-face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
-eyes_cascade = cv2.CascadeClassifier("haarcascade_eye_tree_eyeglasses.xml")
+face_cascade = cv2.CascadeClassifier("../../haarcascade_frontalface_alt.xml")
+eyes_cascade = cv2.CascadeClassifier("../../haarcascade_eye_tree_eyeglasses.xml")
 
 # # 1. Load the cascades
 # if not face_cascade.load(cv2.samples.findFile(face_cascade_name)):

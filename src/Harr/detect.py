@@ -32,10 +32,10 @@ print("channels: {}".format(img.shape[2]))
 
 cv2.imshow("Original Image", img)
 
-face_cascade_name = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
-eyes_cascade_name = cv2.CascadeClassifier("haarcascade_eye_tree_eyeglasses.xml")
-face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
-eyes_cascade = cv2.CascadeClassifier("haarcascade_eye_tree_eyeglasses.xml")
+face_cascade_name = cv2.CascadeClassifier("../../haarcascade_frontalface_alt.xml")
+eyes_cascade_name = cv2.CascadeClassifier("../../haarcascade_eye_tree_eyeglasses.xml")
+face_cascade = cv2.CascadeClassifier("../../haarcascade_frontalface_alt.xml")
+eyes_cascade = cv2.CascadeClassifier("../../haarcascade_eye_tree_eyeglasses.xml")
 
 # # Load the cascades
 # if not face_cascade.load(cv2.samples.findFile(face_cascade_name)):

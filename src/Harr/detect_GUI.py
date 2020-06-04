@@ -5,8 +5,8 @@ from PIL import Image
 from PIL import ImageTk
 from tkinter import filedialog
 
-face_cascade_name = '../opencv/data/haarcascades/haarcascade_frontalface_alt.xml'
-eyes_cascade_name = '../opencv/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml'
+face_cascade_name = '../../haarcascade_frontalface_alt.xml'
+eyes_cascade_name = '../../haarcascade_eye_tree_eyeglasses.xml'
 file_name = '../../image/marathon_01.jpg'
 title_name = 'Haar cascade object detection'
 frame_width = 500
@@ -71,8 +71,8 @@ image = cv2.cvtColor(read_image, cv2.COLOR_BGR2RGB)
 image = Image.fromarray(image)
 imgtk = ImageTk.PhotoImage(image=image)
 
-face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
-eyes_cascade = cv2.CascadeClassifier("haarcascade_eye_tree_eyeglasses.xml")
+face_cascade = cv2.CascadeClassifier("../../haarcascade_frontalface_alt.xml")
+eyes_cascade = cv2.CascadeClassifier("../../haarcascade_eye_tree_eyeglasses.xml")
 
 # # Load the cascades
 # if not face_cascade.load(cv2.samples.findFile(face_cascade_name)):

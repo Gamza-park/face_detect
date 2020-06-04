@@ -5,15 +5,15 @@ from PIL import Image
 from PIL import ImageTk
 from tkinter import filedialog
 
-face_cascade_name = '../opencv/data/haarcascades/haarcascade_frontalface_alt.xml'
-eyes_cascade_name = '../opencv/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml'
+face_cascade_name = '../../haarcascade_frontalface_alt.xml'
+eyes_cascade_name = '../../haarcascade_eye_tree_eyeglasses.xml'
 file_name = 'video/face_01.mp4'
 title_name = 'Haar cascade object detection Video'
 frame_width = 500
 cap = cv2.VideoCapture()
 
-face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
-eyes_cascade = cv2.CascadeClassifier("haarcascade_eye_tree_eyeglasses.xml")
+face_cascade = cv2.CascadeClassifier("../../haarcascade_frontalface_alt.xml")
+eyes_cascade = cv2.CascadeClassifier("../../haarcascade_eye_tree_eyeglasses.xml")
 
 # # 1. Load the cascades
 # if not face_cascade.load(cv2.samples.findFile(face_cascade_name)):

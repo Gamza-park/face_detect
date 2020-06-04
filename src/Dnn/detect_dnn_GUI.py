@@ -8,7 +8,7 @@ from tkinter import filedialog
 model_name = 'res10_300x300_ssd_iter_140000.caffemodel'
 prototxt_name = 'deploy.prototxt.txt'
 min_confidence = 0.3
-file_name = "image/marathon_01.jpg"
+file_name = "../image/marathon_01.jpg"
 title_name = 'dnn Deep learning object detection'
 frame_width = 300
 frame_height = 300

@@ -7,7 +7,7 @@ from tkinter import filedialog
 
 face_cascade_name = '../opencv/data/haarcascades/haarcascade_frontalface_alt.xml'
 eyes_cascade_name = '../opencv/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml'
-file_name = 'image/marathon_01.jpg'
+file_name = '../image/marathon_01.jpg'
 title_name = 'Haar cascade object detection'
 frame_width = 500
 
@@ -61,7 +61,7 @@ main = Tk()
 main.title(title_name)
 main.geometry()
 
-read_image = cv2.imread("image/marathon_01.jpg")
+read_image = cv2.imread("../image/marathon_01.jpg")
 (height, width) = read_image.shape[:2]
 ratio = frame_width / width
 dimension = (frame_width, int(height * ratio))

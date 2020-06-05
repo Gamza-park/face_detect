@@ -3,7 +3,7 @@ import face_recognition
 import pickle
 import time
 
-image_file = 'image/soccer_02.jpg'
+image_file = 'image/marathon_01.jpg'
 encoding_file = 'encodings.pickle'
 unknown_name = 'Unknown'
 

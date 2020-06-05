@@ -1,6 +1,12 @@
-# face_detect
+# pj_object_detection
 
-### yolo
+## For object detection
+### Face detect
+face detect are use Harr, Dnn
+
+### Object classification
+Object classification is use yolo
+#### Yolo
 if you use yolo 
 ```
 $ mkdir yolo

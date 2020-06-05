@@ -7,7 +7,8 @@ file_name = 'video/son_02.mp4'
 encoding_file = 'encodings.pickle'
 unknown_name = 'Unknown'
 
-model_method = 'cnn'
+model_method = 'hog'
+output_name = 'video/output_' + model_method + '.avi'
 
 def detectAndDisplay(image):
     rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -57,11 +58,21 @@ def detectAndDisplay(image):
     image = cv2.resize(image, None, fx=0.5, fy=0.5)
     cv2.imshow("Detect", image)
 
+    global writer
+    if writer is None and output_name is not None:
+        fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+        writer = cv2.VideoWriter(output_name, fourcc, 24, (image.shape[1], image.shape[0]), True)
+
+    if writer is not None:
+        writer.write(image)
+
 # load
 data = pickle.loads(open(encoding_file, "rb").read())
 
 # read video
 cap = cv2.VideoCapture(file_name)
+writer = None
+
 if not cap.isOpened():
     print("error check video")
     exit(0)
@@ -69,6 +80,8 @@ while True:
     ret, frame = cap.read()
     if frame is None:
         print(' No capture')
+        cap.release()
+        writer.release()
     detectAndDisplay(frame)
 
     # push 'q' button to quit

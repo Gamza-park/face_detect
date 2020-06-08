@@ -17,6 +17,7 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(predictor_file)
 
 image = cv2.imread(image_file)
+image = cv2.resize(image,(1000,1000))
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 rects = detector(gray, 1)

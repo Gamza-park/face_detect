@@ -6,7 +6,7 @@ RIGHT_EYE = list(range(36,42))
 LEFT_EYE = list(range(42,48))
 EYES = list(range(36,48))
 
-dataset_paths = ['image/tedy-front/', 'image/son-front/', 'image/unknown-front']
+dataset_paths = ['image/tedy-front/', 'image/son-front/', 'image/unknown-front/']
 output_paths = ['image/tedy-align/', 'image/son-align/', 'image/unknown-align/']
 number_images = 20
 image_type = '.jpg'
